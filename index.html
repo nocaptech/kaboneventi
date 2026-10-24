@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabons Event Concepts | Luxury Event Planning & Decoration</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#0B0B0C',
+                        surface: '#121214',
+                        surfaceLight: '#1C1C20',
+                        gold: {
+                            light: '#F3E5AB',
+                            DEFAULT: '#D4AF37',
+                            dark: '#B8860B',
+                            glow: 'rgba(212, 175, 55, 0.25)'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Custom Gold Gradients & Luxury Styles */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF5C0 0%, #D4AF37 50%, #AA771C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-border-gradient {
+            border-image: linear-gradient(135deg, rgba(212, 175, 55, 0.6), rgba(184, 134, 11, 0.2)) 1;
+        }
+
+        .gold-btn {
+            background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gold-btn:hover {
+            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 100%);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .glass-card {
+            background: rgba(18, 18, 20, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.15);
+        }
+
+        /* Particles ambient effect */
+        .ambient-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, rgba(11, 11, 12, 0) 70%);
+            pointer-events: none;
+            border-radius: 50%;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0B0C;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2A2A30;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+    </style>
+</head>
+<body class="bg-obsidian text-gray-200 font-sans selection:bg-gold selection:text-obsidian overflow-x-hidden">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-surface border-b border-gold/10 text-xs text-center py-2 px-4 text-gray-400 flex justify-between items-center max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <span class="inline-flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+            <span class="text-gray-300 font-medium">Website Concept Demo</span> — Sample content & showcase design
+        </span>
+        <a href="tel:070100098926" class="hover:text-gold transition-colors flex items-center gap-1.5 font-medium text-gold">
+            <i class="fa-solid fa-phone text-[10px]"></i> 0701-000989-26
+        </a>
+    </div>
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="sticky top-0 z-40 bg-obsidian/90 backdrop-blur-md border-b border-gold/20 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo & Name -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold/20 to-gold/5 border border-gold/40 flex items-center justify-center shadow-lg group-hover:border-gold transition-colors">
+                        <!-- Custom Gold SVG Logo Icon (K + Crown/Ring) -->
+                        <svg class="w-7 h-7 text-gold" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50 5L62 25H38L50 5Z" fill="url(#goldGrad)" />
+                            <circle cx="50" cy="50" r="40" stroke="url(#goldGrad)" stroke-width="4" stroke-dasharray="6 4" />
+                            <path d="M35 30V70M35 50L60 30M35 50L60 70" stroke="url(#goldGrad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                                <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#F3E5AB" />
+                                    <stop offset="50%" stop-color="#D4AF37" />
+                                    <stop offset="100%" stop-color="#B8860B" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-xl font-bold tracking-wider text-white group-hover:text-gold transition-colors">KABONS</span>
+                        <span class="text-[9px] tracking-[0.25em] text-gold uppercase font-semibold">Event Concepts</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Home</a>
+                    <a href="#about" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">About</a>
+                    <a href="#services" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Services</a>
+                    <a href="#portfolio" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Portfolio</a>
+                    <a href="#why-us" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Why Us</a>
+                    <a href="#contact" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Contact</a>
+                </div>
+
+                <!-- Call CTA Button -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="tel:070100098926" class="gold-btn text-obsidian font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-full flex items-center gap-2 shadow-md">
+                        <i class="fa-solid fa-phone"></i>
+                        0701-000989-26
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-gold focus:outline-none p-2" aria-label="Toggle Navigation">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-surface border-b border-gold/20 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold hover:bg-obsidian/50 rounded-md">Home</a>
+            <a href="#about" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold hover:bg-obsidian/50 rounded-md">About</a>
+            <a href="#services" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold hover:bg-obsidian/50 rounded-md">Services</a>
+            <a href="#portfolio" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold hover:bg-obsidian/50 rounded-md">Portfolio</a>
+            <a href="#why-us" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold hover:bg-obsidian/50 rounded-md">Why Us</a>
+            <a href="#contact" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold hover:bg-obsidian/50 rounded-md">Contact</a>
+            <div class="pt-2">
+                <a href="tel:070100098926" class="gold-btn w-full text-obsidian font-bold text-center text-xs uppercase tracking-wider py-3 rounded-lg block shadow-md">
+                    <i class="fa-solid fa-phone mr-2"></i> Call 0701-000989-26
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-20">
+        <!-- Ambient Glowing Orbs -->
+        <div class="ambient-glow -top-40 -left-40"></div>
+        <div class="ambient-glow -bottom-40 -right-40"></div>
+
+        <!-- Background Image with Dark Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1920&q=80" 
+                 alt="Luxury Event Setup" 
+                 class="w-full h-full object-cover opacity-25 filter brightness-75 scale-105 transition-transform duration-1000"
+                 onerror="this.src='https://placehold.co/1920x1080/121214/D4AF37?text=Luxury+Event+Background'">
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Luxury Crown Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs font-semibold tracking-widest uppercase mb-8 shadow-inner">
+                <i class="fa-solid fa-crown text-xs"></i> Bespoke Event Styling & Coordination
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
+                We Turn Your Moments Into <span class="gold-gradient-text block sm:inline">Golden Memories.</span>
+            </h1>
+
+            <!-- Supporting Text -->
+            <p class="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+                From beautiful celebrations to unforgettable occasions, Kabons Event Concepts brings creativity, elegance, and meticulous attention to detail to every event.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                <a href="#services" class="gold-btn w-full sm:w-auto text-obsidian font-bold text-sm tracking-wider uppercase px-8 py-4 rounded-full shadow-lg">
+                    Explore Our Services <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                </a>
+                <a href="#contact" class="w-full sm:w-auto text-white hover:text-gold border border-gold/40 hover:border-gold bg-surface/50 backdrop-blur-md font-semibold text-sm tracking-wider uppercase px-8 py-4 rounded-full transition-all duration-300 hover:bg-gold/10">
+                    Contact Us
+                </a>
+            </div>
+
+            <!-- Floating Stat Bar Demo -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-gold/15 pt-8 text-left">
+                <div class="p-4 rounded-lg bg-surface/30 backdrop-blur-sm border border-gold/10">
+                    <p class="text-gold font-serif text-2xl font-bold">100%</p>
+                    <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Bespoke Designs</p>
+                </div>
+                <div class="p-4 rounded-lg bg-surface/30 backdrop-blur-sm border border-gold/10">
+                    <p class="text-gold font-serif text-2xl font-bold">Full Service</p>
+                    <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Planning & Setup</p>
+                </div>
+                <div class="p-4 rounded-lg bg-surface/30 backdrop-blur-sm border border-gold/10">
+                    <p class="text-gold font-serif text-2xl font-bold">Tailored</p>
+                    <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Themes & Decor</p>
+                </div>
+                <div class="p-4 rounded-lg bg-surface/30 backdrop-blur-sm border border-gold/10">
+                    <p class="text-gold font-serif text-2xl font-bold">Premium</p>
+                    <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Vendor Network</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 bg-surface relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                
+                <!-- Left Column: Visual Composition -->
+                <div class="relative">
+                    <div class="relative z-10 rounded-2xl overflow-hidden border border-gold/30 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=80" 
+                             alt="Luxury Event Decor Setup" 
+                             class="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-700"
+                             onerror="this.src='https://placehold.co/1000x800/121214/D4AF37?text=Event+Setup+Demo'">
+                    </div>
+                    <!-- Decorative Gold Accent Frame -->
+                    <div class="absolute -bottom-6 -right-6 w-full h-full border-2 border-gold/20 rounded-2xl -z-0 hidden sm:block"></div>
+                    
+                    <div class="absolute -top-6 -left-6 bg-obsidian border border-gold/40 p-5 rounded-xl shadow-xl z-20 max-w-[200px] hidden sm:block">
+                        <i class="fa-solid fa-gem text-gold text-2xl mb-2"></i>
+                        <p class="text-xs text-gray-300 font-medium">Crafting memorable experiences with elegance.</p>
+                    </div>
+                </div>
+
+                <!-- Right Column: Content -->
+                <div>
+                    <!-- Section Label -->
+                    <div class="inline-flex items-center gap-2 text-gold text-xs font-semibold tracking-widest uppercase mb-3">
+                        <span class="w-8 h-[1px] bg-gold"></span> About Kabons Event Concepts
+                    </div>
+
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mb-6 leading-tight">
+                        Elevating Events with Distinction & Elegance
+                    </h2>
+
+                    <!-- Demo Story Copy -->
+                    <div class="space-y-4 text-gray-300 font-light leading-relaxed text-sm sm:text-base">
+                        <p>
+                            At <strong class="text-gold font-normal">Kabons Event Concepts</strong>, we believe every celebration is a unique story waiting to be told. We specialize in transforming ordinary venues into extraordinary visual experiences through innovative design, flawless coordination, and uncompromising quality.
+                        </p>
+                        <p>
+                            Whether planning an intimate gathering, an extravagant wedding, or a high-profile corporate function, our team works closely with you to curate customized concepts that reflect your personal vision and leave lasting impressions on every guest.
+                        </p>
+                    </div>
+
+                    <!-- Customizable Badge Note for Demo -->
+                    <div class="mt-8 p-4 rounded-xl bg-obsidian/80 border border-gold/20 text-xs text-gold/90 flex items-start gap-3">
+                        <i class="fa-solid fa-circle-info text-base mt-0.5 text-gold"></i>
+                        <div>
+                            <span class="font-semibold block text-white uppercase tracking-wider mb-0.5">Concept Demo Note</span>
+                            This section provides sample company copy. During full development, this section will be updated with your exact business origin story, values, team profile, and key milestones.
+                        </div>
+                    </div>
+
+                    <!-- Highlights Grid -->
+                    <div class="mt-8 grid grid-cols-2 gap-4 border-t border-gold/15 pt-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center text-gold text-xs">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm text-gray-300 font-medium">Custom Styling</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center text-gold text-xs">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm text-gray-300 font-medium">End-to-End Planning</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center text-gold text-xs">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm text-gray-300 font-medium">Floral & Stage Design</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center text-gold text-xs">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm text-gray-300 font-medium">Timely Execution</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROPOSED SERVICES SECTION -->
+    <section id="services" class="py-24 bg-obsidian relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 text-gold text-xs font-semibold tracking-widest uppercase mb-3">
+                    <span class="w-8 h-[1px] bg-gold"></span> What We Offer <span class="w-8 h-[1px] bg-gold"></span>
+                </div>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mb-4">Proposed Event Services</h2>
+                <p class="text-gray-400 text-sm sm:text-base font-light">
+                    Exploratory service offerings for Kabons Event Concepts. These categories demonstrate how your services can be showcased to prospective clients.
+                </p>
+            </div>
+
+            <!-- Service Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="glass-card rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-gold/20 to-gold/5 border border-gold/30 flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-clipboard-list"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-3 group-hover:text-gold transition-colors">
+                            Event Planning & Coordination
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed font-light mb-6">
+                            Organizing events from concept through execution. Vendor management, timeline development, and seamless logistics coordination on your special day.
+                        </p>
+                    </div>
+                    <button onclick="openServiceModal('Event Planning & Coordination', 'Our event planning service ensures complete peace of mind. We manage vendor selection, scheduling, budget allocation, and on-site orchestration so you can enjoy your celebration stress-free.')" class="inline-flex items-center text-xs font-semibold text-gold uppercase tracking-wider hover:underline">
+                        Learn More <i class="fa-solid fa-chevron-right ml-1 text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-card rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-gold/20 to-gold/5 border border-gold/30 flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-3 group-hover:text-gold transition-colors">
+                            Event Decoration & Styling
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed font-light mb-6">
+                            Creating attractive event environments and coordinated visual themes. Custom backdrops, drapery, lighting setups, and luxurious table arrangements.
+                        </p>
+                    </div>
+                    <button onclick="openServiceModal('Event Decoration & Styling', 'We transform blank spaces into breathtaking visual landscapes using high-end fabrics, customized lighting fixtures, botanical setups, and rich color palette pairings.')" class="inline-flex items-center text-xs font-semibold text-gold uppercase tracking-wider hover:underline">
+                        Learn More <i class="fa-solid fa-chevron-right ml-1 text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-card rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-gold/20 to-gold/5 border border-gold/30 flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-rings-wedding"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-3 group-hover:text-gold transition-colors">
+                            Weddings & Engagements
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed font-light mb-6">
+                            Planning and styling special romantic celebrations. From traditional ceremonies to modern luxury receptions tailored to your unique love story.
+                        </p>
+                    </div>
+                    <button onclick="openServiceModal('Weddings & Engagements', 'Your wedding day deserves nothing short of perfection. We design romantic aisle entries, stage setups, head tables, and guest seating layouts that exude timeless romance.')" class="inline-flex items-center text-xs font-semibold text-gold uppercase tracking-wider hover:underline">
+                        Learn More <i class="fa-solid fa-chevron-right ml-1 text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass-card rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-gold/20 to-gold/5 border border-gold/30 flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-cake-candles"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-3 group-hover:text-gold transition-colors">
+                            Birthdays & Private Parties
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed font-light mb-6">
+                            Creating personalized experiences for milestone birthdays, anniversaries, dinner parties, and exclusive private celebrations.
+                        </p>
+                    </div>
+                    <button onclick="openServiceModal('Birthdays & Private Celebrations', 'Celebrate your milestones with flair. We craft custom themed birthday setups, intimate luxury dinner tables, and immersive party atmospheres.')" class="inline-flex items-center text-xs font-semibold text-gold uppercase tracking-wider hover:underline">
+                        Learn More <i class="fa-solid fa-chevron-right ml-1 text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="glass-card rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-gold/20 to-gold/5 border border-gold/30 flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-3 group-hover:text-gold transition-colors">
+                            Corporate Events
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed font-light mb-6">
+                            Supporting professional gatherings, product launches, galas, award nights, and business celebrations with polished executive appeal.
+                        </p>
+                    </div>
+                    <button onclick="openServiceModal('Corporate Events', 'Project prestige and professionalism. We design corporate stages, branding backdrops, gala banquets, and conference setups that represent your company standard.')" class="inline-flex items-center text-xs font-semibold text-gold uppercase tracking-wider hover:underline">
+                        Learn More <i class="fa-solid fa-chevron-right ml-1 text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="glass-card rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-gold/20 to-gold/5 border border-gold/30 flex items-center justify-center text-gold text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-3 group-hover:text-gold transition-colors">
+                            Special Event Concepts
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed font-light mb-6">
+                            Developing creative ideas, bespoke themes, custom prop builds, and unique artistic concepts tailored specifically to your event vision.
+                        </p>
+                    </div>
+                    <button onclick="openServiceModal('Special Event Concepts', 'Have an unconventional idea or a grand vision? Our concept designers engineer custom prop installations, thematic lighting, and bespoke visual aesthetics.')" class="inline-flex items-center text-xs font-semibold text-gold uppercase tracking-wider hover:underline">
+                        Learn More <i class="fa-solid fa-chevron-right ml-1 text-[10px]"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO PREVIEW GALLERY SECTION -->
+    <section id="portfolio" class="py-24 bg-surface relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <div class="inline-flex items-center gap-2 text-gold text-xs font-semibold tracking-widest uppercase mb-3">
+                        <span class="w-8 h-[1px] bg-gold"></span> Visual Portfolio Demo
+                    </div>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Event Inspiration Gallery</h2>
+                </div>
+                <p class="text-gray-400 text-xs sm:text-sm max-w-md mt-4 md:mt-0 font-light">
+                    * Sample gallery showcasing how completed client events, venue transformations, and decorative concepts can be presented on your website.
+                </p>
+            </div>
+
+            <!-- Gallery Filter Buttons -->
+            <div class="flex flex-wrap gap-2 sm:gap-3 mb-10 border-b border-gold/15 pb-6">
+                <button onclick="filterGallery('all')" class="gallery-filter-btn active px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all bg-gold text-obsidian shadow-md">
+                    All Work
+                </button>
+                <button onclick="filterGallery('wedding')" class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all bg-obsidian text-gray-400 hover:text-white border border-gold/20">
+                    Weddings
+                </button>
+                <button onclick="filterGallery('birthday')" class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all bg-obsidian text-gray-400 hover:text-white border border-gold/20">
+                    Birthdays
+                </button>
+                <button onclick="filterGallery('corporate')" class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all bg-obsidian text-gray-400 hover:text-white border border-gold/20">
+                    Corporate
+                </button>
+                <button onclick="filterGallery('tables')" class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all bg-obsidian text-gray-400 hover:text-white border border-gold/20">
+                    Luxury Tables
+                </button>
+                <button onclick="filterGallery('stage')" class="gallery-filter-btn px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all bg-obsidian text-gray-400 hover:text-white border border-gold/20">
+                    Stage & Venue
+                </button>
+            </div>
+
+            <!-- Gallery Items Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+                
+                <!-- Gallery Item 1: Wedding -->
+                <div class="gallery-item wedding group relative rounded-xl overflow-hidden border border-gold/20 bg-obsidian cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80', 'Luxury Wedding Backdrop Decor')">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" 
+                         alt="Wedding Decoration" 
+                         class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700"
+                         onerror="this.src='https://placehold.co/800x600/121214/D4AF37?text=Wedding+Decor+Sample'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                        <span class="text-gold text-xs font-semibold tracking-widest uppercase mb-1">Wedding Decoration</span>
+                        <h4 class="text-white font-serif text-lg font-bold">Grand Ballroom Reception</h4>
+                        <span class="text-gray-300 text-xs mt-2 inline-flex items-center gap-1"><i class="fa-solid fa-expand text-gold"></i> Click to view image</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2: Birthday -->
+                <div class="gallery-item birthday group relative rounded-xl overflow-hidden border border-gold/20 bg-obsidian cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1200&q=80', 'Gold & Black Milestone Birthday Setup')">
+                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80" 
+                         alt="Birthday Setup" 
+                         class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700"
+                         onerror="this.src='https://placehold.co/800x600/121214/D4AF37?text=Birthday+Setup+Sample'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                        <span class="text-gold text-xs font-semibold tracking-widest uppercase mb-1">Birthday Celebration</span>
+                        <h4 class="text-white font-serif text-lg font-bold">Gold Theme Milestone Party</h4>
+                        <span class="text-gray-300 text-xs mt-2 inline-flex items-center gap-1"><i class="fa-solid fa-expand text-gold"></i> Click to view image</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3: Corporate -->
+                <div class="gallery-item corporate group relative rounded-xl overflow-hidden border border-gold/20 bg-obsidian cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80', 'Corporate Gala & Awards Stage')">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" 
+                         alt="Corporate Event" 
+                         class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700"
+                         onerror="this.src='https://placehold.co/800x600/121214/D4AF37?text=Corporate+Setup+Sample'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                        <span class="text-gold text-xs font-semibold tracking-widest uppercase mb-1">Corporate Setup</span>
+                        <h4 class="text-white font-serif text-lg font-bold">Annual Executive Gala Stage</h4>
+                        <span class="text-gray-300 text-xs mt-2 inline-flex items-center gap-1"><i class="fa-solid fa-expand text-gold"></i> Click to view image</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4: Tables -->
+                <div class="gallery-item tables group relative rounded-xl overflow-hidden border border-gold/20 bg-obsidian cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=1200&q=80', 'Crystal & Gold Table Setting')">
+                    <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=800&q=80" 
+                         alt="Table Styling" 
+                         class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700"
+                         onerror="this.src='https://placehold.co/800x600/121214/D4AF37?text=Table+Arrangement+Sample'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                        <span class="text-gold text-xs font-semibold tracking-widest uppercase mb-1">Luxury Tables</span>
+                        <h4 class="text-white font-serif text-lg font-bold">Fine Dining Centerpieces</h4>
+                        <span class="text-gray-300 text-xs mt-2 inline-flex items-center gap-1"><i class="fa-solid fa-expand text-gold"></i> Click to view image</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5: Stage -->
+                <div class="gallery-item stage group relative rounded-xl overflow-hidden border border-gold/20 bg-obsidian cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1200&q=80', 'Illuminated Event Entrance & Stage')">
+                    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80" 
+                         alt="Stage Decoration" 
+                         class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700"
+                         onerror="this.src='https://placehold.co/800x600/121214/D4AF37?text=Stage+Decor+Sample'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                        <span class="text-gold text-xs font-semibold tracking-widest uppercase mb-1">Stage & Venue Decoration</span>
+                        <h4 class="text-white font-serif text-lg font-bold">Custom Stage Canopy & Lighting</h4>
+                        <span class="text-gray-300 text-xs mt-2 inline-flex items-center gap-1"><i class="fa-solid fa-expand text-gold"></i> Click to view image</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6: Wedding / Stage -->
+                <div class="gallery-item wedding stage group relative rounded-xl overflow-hidden border border-gold/20 bg-obsidian cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1200&q=80', 'Special Celebration Lighting Setup')">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80" 
+                         alt="Special Celebration" 
+                         class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700"
+                         onerror="this.src='https://placehold.co/800x600/121214/D4AF37?text=Special+Celebration+Sample'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+                        <span class="text-gold text-xs font-semibold tracking-widest uppercase mb-1">Special Celebrations</span>
+                        <h4 class="text-white font-serif text-lg font-bold">Ambient Lighting & Dance Floor</h4>
+                        <span class="text-gray-300 text-xs mt-2 inline-flex items-center gap-1"><i class="fa-solid fa-expand text-gold"></i> Click to view image</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE KABONS SECTION -->
+    <section id="why-us" class="py-24 bg-obsidian relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 text-gold text-xs font-semibold tracking-widest uppercase mb-3">
+                    <span class="w-8 h-[1px] bg-gold"></span> Our Distinctive Standard <span class="w-8 h-[1px] bg-gold"></span>
+                </div>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mb-4">Why Choose Kabons Event Concepts?</h2>
+                <p class="text-gray-400 text-sm sm:text-base font-light">
+                    Proposed brand values and operational principles that define the Kabons Event Concepts client experience.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Pillar 1 -->
+                <div class="glass-card p-8 rounded-2xl text-center relative group">
+                    <div class="w-16 h-16 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-2xl mx-auto mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-3">Creative Concepts</h3>
+                    <p class="text-gray-400 text-xs sm:text-sm font-light leading-relaxed">
+                        Innovative design themes and fresh stylistic ideas tailored to turn your vision into an unforgettable reality.
+                    </p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="glass-card p-8 rounded-2xl text-center relative group">
+                    <div class="w-16 h-16 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-2xl mx-auto mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-3">Attention to Detail</h3>
+                    <p class="text-gray-400 text-xs sm:text-sm font-light leading-relaxed">
+                        Meticulous placement of drapery, floral elements, lighting focus, and table settings for seamless visual harmony.
+                    </p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="glass-card p-8 rounded-2xl text-center relative group">
+                    <div class="w-16 h-16 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-2xl mx-auto mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-user-gear"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-3">Personalized Experiences</h3>
+                    <p class="text-gray-400 text-xs sm:text-sm font-light leading-relaxed">
+                        Customized coordination plans that respect your preferences, guest size, budget parameters, and theme goals.
+                    </p>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="glass-card p-8 rounded-2xl text-center relative group">
+                    <div class="w-16 h-16 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-2xl mx-auto mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-3">Professional Presentation</h3>
+                    <p class="text-gray-400 text-xs sm:text-sm font-light leading-relaxed">
+                        Punctual setup schedules, refined decor materials, and courteous execution to give your event an executive finish.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & BOOKING INQUIRY SECTION -->
+    <section id="contact" class="py-24 bg-surface relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Left Column: Direct Call CTA & Details -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <div class="inline-flex items-center gap-2 text-gold text-xs font-semibold tracking-widest uppercase mb-3">
+                            <span class="w-8 h-[1px] bg-gold"></span> Get In Touch
+                        </div>
+                        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mb-4">
+                            Let's Create Something Unforgettable.
+                        </h2>
+                        <p class="text-gray-300 text-sm font-light leading-relaxed">
+                            Have an upcoming event? Reach out to discuss how Kabons Event Concepts can bring your celebration to life with elegance and style.
+                        </p>
+                    </div>
+
+                    <!-- Direct Phone Call Card -->
+                    <div class="p-8 rounded-2xl bg-gradient-to-br from-obsidian to-surface border border-gold/40 shadow-xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-6 opacity-10 text-gold text-8xl">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <span class="text-xs font-semibold tracking-widest text-gold uppercase block mb-2">Direct Phone Contact</span>
+                        <a href="tel:070100098926" class="font-serif text-2xl sm:text-3xl font-bold text-white hover:text-gold transition-colors block mb-6">
+                            0701-000989-26
+                        </a>
+                        <a href="tel:070100098926" class="gold-btn text-obsidian font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-full inline-flex items-center gap-2 shadow-lg">
+                            <i class="fa-solid fa-phone-flip"></i> Call Us Now
+                        </a>
+                    </div>
+
+                    <!-- Demo Guidance Box -->
+                    <div class="p-6 rounded-xl bg-obsidian/60 border border-gold/10 text-xs text-gray-400 space-y-2">
+                        <div class="font-semibold text-gold uppercase tracking-wider flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check"></i> Concept Demo Information
+                        </div>
+                        <p>This contact section features your exact business telephone number. Additional contact details (such as official email addresses and social handles) can be added upon full site launch.</p>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Booking Inquiry Form -->
+                <div class="lg:col-span-7">
+                    <div class="glass-card rounded-2xl p-6 sm:p-10 border border-gold/25 relative">
+                        
+                        <h3 class="font-serif text-2xl font-bold text-white mb-2">Send an Event Inquiry</h3>
+                        <p class="text-xs text-gray-400 mb-8">Fill out the sample form below to test the client inquiry workflow interface.</p>
+
+                        <!-- Inquiry Form -->
+                        <form id="inquiry-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <!-- Name Input -->
+                                <div>
+                                    <label for="full-name" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">
+                                        Your Name <span class="text-gold">*</span>
+                                    </label>
+                                    <input type="text" id="full-name" required placeholder="e.g. Chief Adeleke"
+                                           class="w-full bg-obsidian/80 border border-gold/20 rounded-xl px-4 py-3 text-white placeholder-gray-600 text-sm focus:outline-none focus:border-gold transition-colors">
+                                </div>
+
+                                <!-- Phone Input -->
+                                <div>
+                                    <label for="phone-number" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">
+                                        Phone Number <span class="text-gold">*</span>
+                                    </label>
+                                    <input type="tel" id="phone-number" required placeholder="e.g. 08012345678"
+                                           class="w-full bg-obsidian/80 border border-gold/20 rounded-xl px-4 py-3 text-white placeholder-gray-600 text-sm focus:outline-none focus:border-gold transition-colors">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <!-- Event Type -->
+                                <div>
+                                    <label for="event-type" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">
+                                        Event Type <span class="text-gold">*</span>
+                                    </label>
+                                    <select id="event-type" required class="w-full bg-obsidian/80 border border-gold/20 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-gold transition-colors">
+                                        <option value="" disabled selected>Select event category...</option>
+                                        <option value="Wedding">Wedding Reception / Engagement</option>
+                                        <option value="Birthday">Milestone Birthday / Anniversary</option>
+                                        <option value="Corporate">Corporate Function / Gala</option>
+                                        <option value="Special Concept">Special Event Concept</option>
+                                        <option value="Other">Other Private Celebration</option>
+                                    </select>
+                                </div>
+
+                                <!-- Event Date -->
+                                <div>
+                                    <label for="event-date" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">
+                                        Proposed Event Date
+                                    </label>
+                                    <input type="date" id="event-date"
+                                           class="w-full bg-obsidian/80 border border-gold/20 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-gold transition-colors">
+                                </div>
+                            </div>
+
+                            <!-- Message Input -->
+                            <div>
+                                <label for="message" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">
+                                    Event Details & Preferences
+                                </label>
+                                <textarea id="message" rows="4" placeholder="Tell us about your estimated guest count, preferred colors, venue location, or styling vision..."
+                                          class="w-full bg-obsidian/80 border border-gold/20 rounded-xl px-4 py-3 text-white placeholder-gray-600 text-sm focus:outline-none focus:border-gold transition-colors"></textarea>
+                            </div>
+
+                            <!-- Submit CTA Button -->
+                            <button type="submit" class="gold-btn w-full text-obsidian font-bold text-sm tracking-wider uppercase py-4 rounded-xl shadow-lg flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i> Book Us / Send Inquiry
+                            </button>
+
+                            <!-- Disclaimer Text -->
+                            <p class="text-[11px] text-gray-500 text-center italic">
+                                Note: This form demonstrates client-side submission logic for this website concept demo. Form responses are validated locally and are not delivered to a live database.
+                            </p>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-obsidian border-t border-gold/20 pt-16 pb-12 text-gray-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-gold/10">
+                
+                <!-- Brand Info -->
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold">
+                            <!-- SVG Logo Small -->
+                            <svg class="w-6 h-6" viewBox="0 0 100 100" fill="none">
+                                <circle cx="50" cy="50" r="40" stroke="#D4AF37" stroke-width="6" />
+                                <path d="M35 30V70M35 50L60 30M35 50L60 70" stroke="#D4AF37" stroke-width="8" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-serif text-lg font-bold text-white tracking-wider">KABONS</span>
+                            <span class="text-[8px] tracking-[0.2em] text-gold uppercase font-semibold">Event Concepts</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed max-w-sm font-light">
+                        Bringing elegance, creativity, and gold-standard execution to your weddings, celebrations, corporate functions, and bespoke events.
+                    </p>
+                    <div class="pt-2 text-xs text-gold">
+                        <i class="fa-solid fa-phone mr-1.5"></i> 0701-000989-26
+                    </div>
+                </div>
+
+                <!-- Quick Navigation Links -->
+                <div>
+                    <h4 class="font-serif text-white font-semibold text-sm mb-4 uppercase tracking-wider">Navigation</h4>
+                    <ul class="space-y-2.5 text-xs">
+                        <li><a href="#home" class="hover:text-gold transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-gold transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-gold transition-colors">Proposed Services</a></li>
+                        <li><a href="#portfolio" class="hover:text-gold transition-colors">Portfolio Gallery</a></li>
+                        <li><a href="#why-us" class="hover:text-gold transition-colors">Why Kabons</a></li>
+                        <li><a href="#contact" class="hover:text-gold transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Demo Statement -->
+                <div>
+                    <h4 class="font-serif text-white font-semibold text-sm mb-4 uppercase tracking-wider">Demo Purpose</h4>
+                    <p class="text-xs text-gray-400 font-light leading-relaxed mb-4">
+                        This website presentation demonstrates the potential design direction, interactive layout, and digital branding for Kabons Event Concepts.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Bottom Disclaimer & Copyright -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-center sm:text-left">
+                <p>&copy; 2026 Kabons Event Concepts. All rights reserved.</p>
+                <p class="text-gold/80 italic font-light">
+                    Website concept demonstration — sample content and imagery. Final business website to be customized and developed separately.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SERVICE DETAILS MODAL -->
+    <div id="service-modal" class="fixed inset-0 z-50 bg-obsidian/90 backdrop-blur-md hidden items-center justify-center p-4">
+        <div class="glass-card max-w-lg w-full rounded-2xl p-8 border border-gold/30 relative text-left">
+            <button onclick="closeServiceModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gold text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="w-12 h-12 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-xl mb-4">
+                <i class="fa-solid fa-crown"></i>
+            </div>
+            <h3 id="modal-title" class="font-serif text-2xl font-bold text-white mb-3">Service Details</h3>
+            <p id="modal-description" class="text-gray-300 text-sm leading-relaxed mb-6 font-light">Service description goes here...</p>
+            <div class="flex justify-end gap-3">
+                <button onclick="closeServiceModal()" class="px-5 py-2.5 rounded-full border border-gold/30 text-xs font-semibold text-white hover:bg-gold/10">Close</button>
+                <a href="#contact" onclick="closeServiceModal()" class="gold-btn px-5 py-2.5 rounded-full text-xs font-bold text-obsidian uppercase">Inquire Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX MODAL FOR GALLERY -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 bg-obsidian/95 backdrop-blur-lg hidden items-center justify-center p-4" onclick="closeLightbox()">
+        <div class="relative max-w-4xl w-full text-center" onclick="event.stopPropagation()">
+            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white hover:text-gold text-2xl">
+                <i class="fa-solid fa-xmark"></i> Close
+            </button>
+            <img id="lightbox-img" src="" alt="Enlarged Portfolio View" class="max-h-[80vh] w-auto mx-auto rounded-xl border border-gold/30 shadow-2xl">
+            <p id="lightbox-caption" class="text-gold font-serif text-lg font-semibold mt-4"></p>
+        </div>
+    </div>
+
+    <!-- NOTIFICATION TOAST FOR FORM SUBMISSION DEMO -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 max-w-md bg-surface border border-gold/40 text-white p-5 rounded-2xl shadow-2xl transform translate-y-32 opacity-0 transition-all duration-500 flex items-start gap-4">
+        <div class="w-10 h-10 rounded-full bg-gold/20 text-gold flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-circle-check text-xl"></i>
+        </div>
+        <div>
+            <h5 class="font-serif font-bold text-white text-sm mb-1">Inquiry Demo Submitted</h5>
+            <p id="toast-message" class="text-xs text-gray-300 font-light">Thank you! Your sample inquiry was validated successfully.</p>
+        </div>
+        <button onclick="hideToast()" class="text-gray-400 hover:text-white text-xs ml-auto">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'fa-solid fa-bars text-2xl';
+            } else {
+                menuIcon.className = 'fa-solid fa-xmark text-2xl';
+            }
+        });
+
+        // Close mobile drawer when clicking nav link
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = 'fa-solid fa-bars text-2xl';
+            });
+        });
+
+        // Gallery Filter Logic
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.gallery-filter-btn');
+
+            // Update button styles
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-gold', 'text-obsidian', 'shadow-md');
+                btn.classList.add('bg-obsidian', 'text-gray-400');
+            });
+
+            event.currentTarget.classList.remove('bg-obsidian', 'text-gray-400');
+            event.currentTarget.classList.add('bg-gold', 'text-obsidian', 'shadow-md');
+
+            // Filter cards
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Service Modal Logic
+        function openServiceModal(title, description) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-description').innerText = description;
+            const modal = document.getElementById('service-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeServiceModal() {
+            const modal = document.getElementById('service-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Lightbox Modal Logic
+        function openLightbox(imgUrl, caption) {
+            document.getElementById('lightbox-img').src = imgUrl;
+            document.getElementById('lightbox-caption').innerText = caption;
+            const lightbox = document.getElementById('lightbox-modal');
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox-modal');
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+        }
+
+        // Form Validation & Toast Notification
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('full-name').value.trim();
+            const phone = document.getElementById('phone-number').value.trim();
+            const eventType = document.getElementById('event-type').value;
+
+            if (!name || !phone || !eventType) {
+                showToast("Please fill in all required fields marked with *.");
+                return;
+            }
+
+            // Display Toast Demonstration Notice
+            showToast(`Thank you, ${name}! Your inquiry test for "${eventType}" was validated. (Demo Mode: No backend delivery)`);
+            
+            // Reset form
+            document.getElementById('inquiry-form').reset();
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').innerText = msg;
+            toast.classList.remove('translate-y-32', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                hideToast();
+            }, 5000);
+        }
+
+        function hideToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('translate-y-32', 'opacity-0');
+            toast.classList.remove('translate-y-0', 'opacity-100');
+        }
+
+        // Navbar blur change on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-xl', 'bg-obsidian/95');
+            } else {
+                nav.classList.remove('shadow-xl', 'bg-obsidian/95');
+            }
+        });
+    </script>
+</body>
+</html>
